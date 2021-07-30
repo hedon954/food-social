@@ -1,0 +1,5 @@
+# Project exclude paths
+.idea
+/ms-diners/target/
+/ms-gateway/target/
+/ms-registry/target/

@@ -1,0 +1,19 @@
+# 配置端口
+server:
+  port: 8081
+
+# 配置 SpringBoot 应用
+spring:
+  application:
+    name: ms-diners
+
+# 注册进 Eureka
+eureka:
+  instance:
+    prefer-ip-address: true
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8080/eureka/

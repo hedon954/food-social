@@ -1,0 +1,18 @@
+# 配置端口
+server:
+  port: 8080
+
+# 配置 SpringBoot 应用信息
+sprint:
+  application:
+    name: ms-registry
+
+
+# 配置 Eureka Server 注册中心
+eureka:
+  client:
+    # 单节点注册中心的时候不要自我注册
+    registry-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
